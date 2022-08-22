@@ -8,7 +8,6 @@ resources:
 - hpa.yaml
 - service-monitor.yaml
 
-namespace: bot-wpp
 
 images:
 - name: bot-wpp
