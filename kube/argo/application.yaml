@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/GabSnow24/bot-wpp-k8s
+    repoURL: https://github.com/GabSnow24/bot-wpp-k8s.git
     targetRevision: HEAD
     path: kube/dev
   destination:
