@@ -7,4 +7,4 @@ resources:
 images:
 - name: bot-wpp
   newName: qzzdocker24/bot-wpp
-  newTag: 025c40e83ccf0b5945b363a6d32df6f53b5f236d
+  newTag: 875d2fb83c842a67e1db28e647c875e2eab20c3d
