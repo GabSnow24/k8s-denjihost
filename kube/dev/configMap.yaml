@@ -6,7 +6,7 @@ metadata:
     app.kubernetes.io/part-of: argocd
 data:
   DATABASE: postgres
-  DB_HOST: postgres
+  DB_HOST: postgres.default
   DB_PORT: '5432'
   APP_NAME: bot-wpp
   API_PORT: '8080'
