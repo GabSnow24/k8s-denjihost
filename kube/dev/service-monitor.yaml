@@ -4,6 +4,7 @@ metadata:
   name: bot-wpp-monit
   labels:
     release: prometheus
+    app: prometheus
 spec:
   endpoints:
     - port: bot-service-port
