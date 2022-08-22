@@ -10,7 +10,6 @@ spec:
     - port: bot-service-port
       interval: 30s
       path: /metrics
-  jobLabel: monitoring
   selector:
     matchLabels:
       app: bot-wpp
