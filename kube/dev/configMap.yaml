@@ -3,6 +3,7 @@ kind: ConfigMap
 metadata:
   name: bot-wpp-config-dev
   namespace: bot-wpp
+  app.kubernetes.io/part-of: argocd
 data:
   DATABASE: postgres
   DB_HOST: postgres
