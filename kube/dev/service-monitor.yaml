@@ -2,7 +2,6 @@ apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
   name: bot-wpp-monit
-  namespace: bot-wpp
   labels:
     release: prometheus
 spec:
