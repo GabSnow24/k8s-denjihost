@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: bot-wpp
+  namespace: bot-wpp
 spec:
   selector:
     matchLabels:
