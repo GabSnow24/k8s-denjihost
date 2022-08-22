@@ -11,7 +11,7 @@ spec:
     path: kube/dev
   destination:
     server: https://kubernetes.default.svc
-    namespace: default
+    namespace: bot-wpp
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
