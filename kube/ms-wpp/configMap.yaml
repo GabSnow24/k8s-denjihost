@@ -5,5 +5,5 @@ metadata:
   labels:
     app.kubernetes.io/part-of: argocd
 data:
-  RABBIT_URL: amqp://rabbit-release-rabbitmq.default.svc.cluster.local:5672
+  RABBIT_URL: amqp://user:gg9Qljo8LYDng7Iy@rabbit-release-rabbitmq.default.svc.cluster.local:5672
 
