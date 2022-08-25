@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ms-wpp-argo
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/GabSnow24/bot-wpp-k8s.git
+    targetRevision: HEAD
+    path: kube/ms-wpp
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: ms-wpp
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
+
+    automated:
+      selfHeal: true
+      prune: true
