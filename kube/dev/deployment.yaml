@@ -68,3 +68,8 @@ spec:
                   key: API_PORT
             - name: DATABASE_URL
               value: postgresql://$(DB_USER):$(DB_PASSWORD)@$(DB_HOST):$(DB_PORT)/$(DATABASE)
+            - name: RABBIT_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: bot-wpp-config-dev
+                  key: RABBIT_URL
