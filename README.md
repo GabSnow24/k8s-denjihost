@@ -1,1 +1,1 @@
-# bot-wpp-k8s
+# k8s-denjihost

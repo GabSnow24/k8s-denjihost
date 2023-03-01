@@ -1,17 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: bot-wpp-argo
+  name: api-denjihost-argo
   namespace: argocd
 spec:
   project: default
   source:
-    repoURL: https://github.com/GabSnow24/bot-wpp-k8s.git
+    repoURL: https://github.com/GabSnow24/k8s-denjihost.git
     targetRevision: HEAD
     path: kube/dev
   destination:
     server: https://kubernetes.default.svc
-    namespace: bot-wpp
+    namespace: api-denjihost
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
