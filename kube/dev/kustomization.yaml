@@ -12,4 +12,4 @@ resources:
 images:
 - name: api-denjihost
   newName: qzzdocker24/api-denjihost
-  newTag: 74bbb9c6caa3f6cb521ea362de1255c3746d33d7
+  newTag: 849b01a6c811e7740b8b8548ec40f2172b21ce9d
