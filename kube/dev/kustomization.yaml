@@ -10,6 +10,6 @@ resources:
 
 
 images:
-- name: bot-wpp
-  newName: qzzdocker24/bot-wpp
+- name: api-denjihost
+  newName: qzzdocker24/api-denjihost
   newTag: 74bbb9c6caa3f6cb521ea362de1255c3746d33d7

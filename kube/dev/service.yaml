@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: bot-wpp
+  name: api-denjihost
 spec:
   selector:
-    app: bot-wpp
+    app: api-denjihost
   ports:
-    - name: bot-service-port
+    - name: api-denjihost-service-port
       port: 80
       targetPort: api-port
   type: LoadBalancer

@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: bot-wpp
+  name: api-denjihost
 spec:
   selector:
     matchLabels:
-      app: bot-wpp
+      app: api-denjihost
   template:
     metadata:
       labels:
-        app: bot-wpp
+        app: api-denjihost
       annotations:
         prometheus.io/scrape: "true"
         prometheus.io/port: "8080" 
-        prometheus.io/path: "/metrics"
+        prometheus.io/path: "/swagger-stats"
     spec:
       containers:
-        - name: bot-wpp
-          image: bot-wpp
+        - name: api-denjihost
+          image: api-denjihost
           resources:
             limits:
               memory: '128Mi'
@@ -26,50 +26,19 @@ spec:
             - name: api-port
               containerPort: 8080
           env:
-            - name: DB_USER
-              valueFrom:
-                secretKeyRef:
-                  name: bot-wpp-secret-dev
-                  key: db-username
-            - name: DB_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: bot-wpp-secret-dev
-                  key: db-password
             - name: SESSION_SECRET
               valueFrom:
                 secretKeyRef:
-                  name: bot-wpp-secret-dev
+                  name: api-denjihost-secret-dev
                   key: jwt-secret
-            - name: DATABASE
+            - name: DATABASE_URL
               valueFrom:
-                configMapKeyRef:
-                  name: bot-wpp-config-dev
-                  key: DATABASE
-            - name: DB_HOST
-              valueFrom:
-                configMapKeyRef:
-                  name: bot-wpp-config-dev
-                  key: DB_HOST
-            - name: DB_PORT
-              valueFrom:
-                configMapKeyRef:
-                  name: bot-wpp-config-dev
-                  key: DB_PORT
-            - name: APP_NAME
-              valueFrom:
-                configMapKeyRef:
-                  name: bot-wpp-config-dev
-                  key: APP_NAME
+                secretKeyRef:
+                  name: api-denjihost-secret-dev
+                  key: db-url
             - name: API_PORT
               valueFrom:
                 configMapKeyRef:
-                  name: bot-wpp-config-dev
+                  name: api-denjihost-config-dev
                   key: API_PORT
-            - name: DATABASE_URL
-              value: postgresql://$(DB_USER):$(DB_PASSWORD)@$(DB_HOST):$(DB_PORT)/$(DATABASE)
-            - name: RABBIT_URL
-              valueFrom:
-                configMapKeyRef:
-                  name: bot-wpp-config-dev
-                  key: RABBIT_URL
+

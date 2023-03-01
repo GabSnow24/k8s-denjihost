@@ -1,9 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: ms-wpp-config-dev
-  labels:
-    app.kubernetes.io/part-of: argocd
-data:
-  RABBIT_URL: amqp://user:sqiyoafe2YpOF61D@rabbit-mq-rabbitmq.default.svc.cluster.local:5672
-
