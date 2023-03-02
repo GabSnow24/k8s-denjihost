@@ -1,15 +1,15 @@
-# apiVersion: monitoring.coreos.com/v1
-# kind: ServiceMonitor
-# metadata:
-#   name: api-denjihost-monit
-#   labels:
-#     release: prometheus
-#     app: prometheus
-# spec:
-#   endpoints:
-#     - port: api-denjihost-port
-#       interval: 30s
-#       path: /swagger-stats
-#   selector:
-#     matchLabels:
-#       app: api-denjihost
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: api-denjihost-monit
+  labels:
+    release: prometheus
+    app: prometheus
+spec:
+  endpoints:
+    - port: api-denjihost-port
+      interval: 30s
+      path: /swagger-stats/metrics
+  selector:
+    matchLabels:
+      app: api-denjihost
