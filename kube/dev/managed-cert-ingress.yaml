@@ -11,4 +11,4 @@ spec:
     service:
       name: api-denjihost
       port:
-        number: api-denjihost-service-port
+        number: 80
